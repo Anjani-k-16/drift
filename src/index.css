@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-dark: #070A14;
+  --bg-card: #0E1324;
+  --bg-elevated: #141A2E;
+  --border-glass: #252D45;
+  --border-glass-light: #3B4768;
+
+  --color-brand: #8B5CF6;
+  --color-brand-bright: #A78BFA;
+
+  --color-normal: #34D399;
+  --color-worth: #FBBF24;
+  --color-significant: #FF5A79;
+  --color-market: #38BDF8;
+
+  --text-primary: #F5F7FF;
+  --text-secondary: #94A3B8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #070A14;
+  background-image: 
+    radial-gradient(at 50% 0%, rgba(139, 92, 246, 0.08) 0px, transparent 65%),
+    radial-gradient(at 0% 100%, rgba(56, 189, 248, 0.04) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #F5F7FF;
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Glassmorphism / Midnight Card Panel */
+.glass-panel {
+  background: #0E1324;
+  border: 1px solid #252D45;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: #3B4768;
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* High-Contrast Semantic Badges */
+.badge-significant {
+  background: rgba(255, 90, 121, 0.18);
+  color: #FF5A79;
+  border: 1px solid rgba(255, 90, 121, 0.5);
+  font-weight: 700;
+}
+
+.badge-worth {
+  background: rgba(251, 191, 36, 0.15);
+  color: #FBBF24;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  font-weight: 600;
+}
+
+.badge-normal {
+  background: rgba(52, 211, 153, 0.08);
+  color: #94A3B8; /* Muted slate for normal state */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.badge-market {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38BDF8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.badge-brand {
+  background: rgba(139, 92, 246, 0.15);
+  color: #A78BFA;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070A14;
+}
+::-webkit-scrollbar-thumb {
+  background: #252D45;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3B4768;
+}
